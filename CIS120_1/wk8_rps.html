@@ -1,0 +1,54 @@
+<html>
+<script type="text/javascript">
+
+var fighter1 = prompt("Choose your fighter: rock, paper or scissors");
+var fighter2 = Math.random();
+
+if (fighter2 <= 0.33) {
+    fighter2 = "scissors";
+	} 
+else if(fighter2 <= 0.66) {
+    fighter2 = "paper";
+	} 
+else {
+    fighter2 = "rock";
+	}
+
+var compare = function(fighter1, fighter2) {
+
+if(fighter1 === fighter2) {
+    return "The result is a tie!";
+	}
+if(fighter1 === "rock") {
+    if(fighter2 === "scissors") {
+        return "Rock wins!";
+    } else {
+        return "paper wins";
+    }
+}
+if(fighter1 ==="paper") {
+    if(fighter2 === "rock") {
+        return "Paper wins!";
+    } else {
+        if(fighter2 === "scissors") {
+            return "Scissors wins!";
+    }
+}
+if(fighter1 === "scissors") {
+    if(fighter2 === "rock") {
+        return "Rock wins!";
+    } else {
+        if(fighter2 === "paper") {
+            return "Scissors wins!";
+        }
+    }
+}
+}
+};
+document.write("You chose: " + fighter1);
+document.write("<br>");
+document.write("They chose: " + fighter2);
+document.write("<br>");
+document.write(compare(fighter1, fighter2));
+</script>
+</html>

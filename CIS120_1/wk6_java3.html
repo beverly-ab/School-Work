@@ -1,0 +1,23 @@
+<html>
+<script type="text/javascript">
+var book1 = 0;
+var book2 = 0;
+var book3 = 0;
+
+book1=prompt("Price of book 1", 0);
+book2 = prompt("Price of book 2", 0);
+book3 = prompt("Price of book 3", 0);
+var ans = (Number(book1) + Number(book2) + Number(book3)) / 3;
+if (ans >100)
+	{
+	msg = ("This is too expensive! ")
+	}
+else
+	{	
+	msg = ("This is okay. ")
+	}
+
+
+document.write(msg, ans)
+</script>
+</html>

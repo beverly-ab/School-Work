@@ -1,0 +1,27 @@
+<html>
+<script type="text/javascript">
+var one = 10;
+var two = 20;
+var wksum = 0;
+var rslt = 0;
+
+do {
+	wksum = Number(one) + Number(two);
+	if (wksum > 30) {
+	  one = one - 2;
+	  two = two + 1;
+		}
+	else {
+	  one = one - 1;
+	  two = two + 3;
+		}	
+
+}while (two < 30 );
+
+rslt = Number(one) + Number(two);
+document.write("Your result is: ", rslt);
+document.write("<br>");
+
+
+</script>
+</html>

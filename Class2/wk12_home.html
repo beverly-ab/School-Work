@@ -1,0 +1,64 @@
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Wk12 - Home Repairs</title>
+    <link rel="stylesheet" href="wk12_home.css">
+   <script type="text/javascript">
+        priceGroup = new Array("No choice", "$500.00 +", "$750.00 +", "$1000.00 +", "$4000.00 +")
+        function setPrice(passedParm) {
+            document.homePrice.price.value = priceGroup[passedParm]
+        }
+        function totPrice(){
+           var i = document.hrsTot.hrs.value * 2000
+             document.costWork.cost.value = i
+        //  alert(document.costWork.cost.value = i)
+        //    document.costWork.cost.write(i)
+        //    document.getElementById("cost").innerHTML = i
+        }
+    </script>
+</head>
+
+<body>
+    <p>
+        <img SRC="house1.jpg" width="285" height="178" />
+    <table border="2" width="100%">
+        <tr>
+            <td width="33%">
+                <h3>What can we do for you?</h3>
+            </td>
+            <td width="33%">
+                <form name="toDo">
+                    <select name="itemChoice" onchange="setPrice(toDo.itemChoice.selectedIndex)">
+                        <option>Make choice
+                        <option>Painting the Inside
+                        <option>Painting the Outside
+                        <option>Staging
+                        <option>New Roof
+                    </select>
+                </form>
+            </td>
+            <td width="33%">
+                <form name="homePrice">
+                    <input type="text" name="price" size="20">
+                </form>
+            </td>
+        </tr> 
+        <tr>
+            <td width="40%">
+                <h3>The hours:</h3>
+                <form name="hrsTot" actions="#">
+                <input type="text" id="hrs" name="hrs">
+                <input type="button" name="submit" value="submit" onclick="totPrice()">
+            </td>
+            </form>
+            <td width="60%" colspan="2">
+                <form name="costWork"actions="#">
+                    <input type="text" name="cost" id="cost" size="20">
+                </form>
+            </td>
+        </tr>
+    </table>
+</body>
+
+</html>

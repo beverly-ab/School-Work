@@ -1,0 +1,18 @@
+
+<html>
+<script type="text/javascript">
+var total=0;
+var ct=0;
+var user_input;
+var reorder=prompt("At what point do we reorder?",0);
+while (total < reorder)
+   {
+	user_input =prompt("How many ordered",0);
+    ct = ct + 1;
+	total= Number(total) + Number(user_input);
+	
+   }
+
+document.write("You should reorder! <br>", reorder);
+</script>
+</html>

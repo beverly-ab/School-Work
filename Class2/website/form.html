@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>CC || Form</title>
+
+    <link rel="stylesheet" href="./css/styles.css" />
+</head>
+<body>
+
+    <!-- nav -->
+    <nav class="navbar" id="navbar">
+    
+        <ul class="links">
+            <li><a href="index.html" >home</a></li>
+            <li><a href="about.html">about</a></li>
+            <li><a href="products.html" >products</a></li>
+            <li><a href="form.html">form</a>
+            </li>
+        </ul>
+    </nav>
+
+
+
+
+
+    <!-- header -->
+    <header class="header">
+        <div class="banner">
+            <h3 class="banner-subtitle">creative solutions</h3>
+            <h1 class="banner-title">Creative Ceramics</h1>
+        </div>
+    </header>
+    <div class="content-divider"></div>
+
+    <!-- cakeform -->
+    <div class="wrap">
+        <form action="" id="cakeform" onsubmit="return false;">
+    <div>
+    <fieldset>
+    <legend>Get an Estimate</legend>
+    <label>Size Of the Cake</label><br>
+    <label><input type="radio" name="selectedcake" value="Round6" onclick="calculateTotal()" />Round cake 6" - serves 8 people ($20)</label><br />
+    <label ><input type="radio" name="selectedcake" value="Round8" onclick="calculateTotal()" />Round cake 8" - serves 12 people ($25)</label><br />
+    <label><input type="radio" name="selectedcake" value="Round10" onclick="calculateTotal()" />Round cake 10" - serves 16 people($35)</label><br />
+    <label><input type="radio" name="selectedcake" value="Round12"
+    onclick="calculateTotal()" />Round cake 12" - serves 30 people($75)</label><br />
+    <br />
+    <label>Filling</label>
+    <select name='filling' onchange="calculateTotal()"> 
+    <option value="None">Select Filling</option>
+    <option value="Lemon">Lemon($5)</option>
+    <option value="Custard">Custard($5)</option>
+    <option value="Fudge">Fudge($7)</option>
+    <option value="Mocha">Mocha($8)</option>
+    <option value="Raspberry">Raspberry($10)</option>
+    <option value="Pineapple">Pineapple($5)</option>
+    <option value="Dobash">Dobash($9)</option>
+    <option value="Mint">Mint($5)</option>
+    <option value="Cherry">Cherry($5)</option>
+    <option value="Apricot">Apricot($8)</option>
+    <option value="Buttercream">Buttercream($7)</option>
+    <option value="Chocolate Mousse">Chocolate Mousse($12)</option>
+    </select>
+    <br>
+    <p>
+    <label for='includecandles' class="inlinelabel">Include Candles($5)</label>
+    <input type="checkbox" id="includecandles" name='includecandles' onclick="calculateTotal()" />
+</p>
+<p>
+    <label>Include Inscription($20)</label>
+    <input type="checkbox" name="" onclick="calculateTotal()" />
+    <input type="text" id="theinscription" name="theinscription" value="Enter Inscription" />
+</p>
+<div class="totalPrice"></div>
+</fieldset>
+</div>
+<div class="cont_details">
+    <fieldset>
+    <legend>Contact Details</legend>
+    <label for='name'>Name</label>
+    <input type="text" id="name" name='name' />
+    <br>
+    <label for='address'>Email Address</label>
+    <input type="text" id="address" name='address' />
+    <br >
+    <label for='phonenumber'>Phone Number</label>
+    <input type="text" id="phonenumber" name='phonenumber' />
+        <br>
+    </fieldset>
+    </div>
+    <input type='submit' class='main-btn' value='Submit' onclick="calculateTotal()" />
+            </div>
+        </form>
+    </div>
+    <!--End of wrap-->
+
+<div class="content-divider"></div>
+<footer class="footer">
+    <div class="section-center">
+        <a href="sitemap.html" class="main-btn"> sitemap</a>
+        <p class="footer-text">
+            Creative Ceramics &copy; 2021
+        </p>
+    </div>
+</footer>
+<script src="./js/app.js"></script>
+</body>
+
+</html>

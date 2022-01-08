@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>wk13 house</title>
+    <SCRIPT>
+        fstArray = new Array(6);
+        fstArray[0] = new Image;
+        fstArray[0].src = "house.jpg";
+        fstArray[1] = new Image;
+        fstArray[1].src = "house2.jpg";
+        fstArray[2] = new Image;
+        fstArray[2].src = "house3.jpg";
+        fstArray[3] = new Image;
+        fstArray[3].src = "house4.jpg";
+        fstArray[4] = new Image;
+        fstArray[4].src = "house5.jpg";
+        fstArray[5] = new Image;
+        fstArray[5].src = "house6.jpg";
+        index = 0;
+        function cycle() {
+            document.rotate.src = fstArray[index].src;
+            index = index + 1;
+            if (index == 6) {
+                index = 0;
+            }
+        } 
+    </SCRIPT>
+</head>
+<body>
+    <DIV ALIGN=CENTER>
+        <H1>Pictures of the House</H1>
+        <FORM>
+            <INPUT TYPE=BUTTON VALUE="COME INSIDE" onClick="cycle();">
+        </FORM>
+        <IMG SRC="house1.jpg" NAME="rotate" WIDTH=50% HEIGHT=50%>
+    </DIV>
+</body>
+</html>

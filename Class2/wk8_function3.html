@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wk 8 - Function 3</title>
+    <style type="text/css">
+        body {
+            background: rgb(112, 110, 236);
+            color: rgb(231, 195, 202);
+        }
+
+        p {
+            color: rgb(231, 195, 202);
+        }
+    </style>
+    <script>
+        function penName(firstReceived, lastReceived) {
+            var msg = "";
+            msg = "Greetings, " + firstReceived.value + " " + lastReceived.value + "!"
+            alert(msg);
+            return msg;
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Get your new PEN NAME!</h1>
+    <form id="info" name="info">
+
+        <p>The last thing you ate:
+            <input type="text" name="firstIn" size="25" />
+        </p>
+        <p>The name of the street you grew up on:
+            <input type="text" name="lastIn" size="25" />
+        </p>
+        <p><input type="button" name="toClick" value="Click" onclick="penName(firstIn, lastIn)" />
+        </p>
+    </form>
+
+</body>
+
+</html>

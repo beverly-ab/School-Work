@@ -1,0 +1,13 @@
+body {
+  background: cornflowerblue;
+  color: white;
+}
+
+table {
+  background: goldenrod;
+  border: dotted 5px;
+}
+
+p {
+  text-align: center;
+}

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POINTS</title>
+<!-- <style>
+* {
+    text-align: center;
+}
+
+</style> -->
+
+<script>
+
+
+    function calcTot() {
+        var ans1 = document.getElementById("pointz").value + document.getElementById("pointz2").value + document.getElementById("pointz3").value;
+        return ans1;
+    }
+        function calcPenalt() { 
+
+        var ans2 = document.getElementById("penalties").value + document.getElementById("penalties2").value + document.getElementById("penalties3").value;
+        return ans2;
+    
+            
+        }  
+</script>
+
+</head>
+<body>
+<h1>Total Points and Penalty</h1>
+<p> Enter your code and your ponts and penalty:</p>
+<form name="totform" id="totform">
+   <table>
+        <tr class="titlez">
+        <th>CODE</th>
+        <th>POINTS</th>
+        <th>PENALTY</th>
+    </tr>
+   <br>
+<tr>
+        <th><input type="text" name="idCode" id="idCode" ></th>
+        <th> <input type="text" name="pointz" id="pointz" ></th>
+        <th> <input type="text" name="penalties" id="penalties" ></th>
+</tr>
+<br>
+<tr>
+    <th><input type="text" name="idCode" id="idCode"  ></th>
+    <th> <input type="text" name="pointz2" id="pointz2"  ></th>
+    <th> <input type="text" name="penalties2" id="penalties2" ></th>
+</tr>
+<br>
+<tr>
+    <th><input type="text" name="idCode" id="idCode"   ></th>
+    <th> <input type="text" name="pointz3" id="pointz3"  ></th>
+    <th> <input type="text" name="penalties3" id="penalties3" ></th>
+</tr>
+
+<br>
+<th><input type="reset" value="Clear" ></th>
+<th><input type="button" value="Total Points" onclick="totalPoints.value=calcTot()"></th>
+<th><input type="button" value="Total Penalties" onclick="totalPenalties.value=calcPenalt()"></th>
+</table>
+
+
+    <p>
+        Total button of points: <input type="text" name="totalPoints" id="totalPoints" ><br>
+    </p>
+
+<p>
+    The total penalty:  <input type="text" name="totalPenalties" id="totalPenalties"><br>
+</p>
+    
+</form>
+
+</body>
+</html>

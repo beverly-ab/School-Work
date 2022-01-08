@@ -1,0 +1,54 @@
+<html>
+
+<head>
+    <title>Question 11</title>
+    <script language="JavaScript">
+                   optionArray = new Array(5);
+                    optionArray[0] = "Ferro";
+                    optionArray[1] = "Grocer";
+                    optionArray[2] = "Kholodov";
+                    optionArray[3] = "Arruda";
+                    optionArray[4] = "Frechette";
+       
+       function whichOption(optionInfo) {
+            if (optionInfo.biz.checked == true) {
+               window.document.optionInfo.myAdvisor = (optionArray[0]);
+            }
+            if (optionInfo.web.checked == true) {
+               
+                window.document.optionInfo.myAdvisor.value = (optionArray[1]);               
+            }
+            if (optionInfo.cs.checked == true) {
+
+                window.document.optionInfo.myAdvisor.value = (optionArray[2]);
+            }
+            if (optionInfo.net.checked == true) {
+
+            window.document.optionInfo.myAdvisor.value = (optionArray[3]);
+            }
+           if (optionInfo.sec.checked == true) {
+
+               window.document.optionInfo.myAdvisor.value = (optionArray[4]);
+           }
+
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Question 11</h1>
+    Check the type of CIS career option to find out the name of your advisor:
+    <form name="optionInfo">
+        <input type="radio" id="biz" name="radiobutton"> Business Information Systems<BR>
+        <input type="radio" id="web" name="radiobutton"> Programming and Web Development<BR>
+        <input type="radio" id="cs" name="radiobutton"> Computer Science<br>
+        <input type="radio" id= "net" name="radiobutton"> Networking<br>
+        <input type="radio" id="sec" name="radiobutton"> Cyber Security and Digital Forensics<br>
+
+        <input type="button" value="Select Option"  onClick="whichOption(optionInfo)">
+        <input type="text" name="myAdvisor" SIZE="30"><br>
+    </form>
+    <a href="javascript:location.reload(true)">Refresh Page</a>
+</body>
+
+</html>

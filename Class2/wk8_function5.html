@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wk 8 - Function 5</title>
+<style>
+body {
+    background: purple;
+}
+body,  h1{
+        text-align: center;
+        color: whitesmoke;
+    }
+</style>
+
+<script>
+
+    function fortuneFunction() {
+            fortuneArray = new Array(4);
+            fortuneArray[0] = "The spirits are pleased with you!";
+            fortuneArray[1] = "Stay away from mirrors - you are apt to break one!";
+            fortuneArray[2] = "You will befriend the neighborhood cat";
+            fortuneArray[3] = "A masterpiece is brewing inside of you. Let it out!";
+            fortuneArray[4] = "A black bear crossed your path and - no wait... or is it a black cat?";
+            
+            if (fortune < 5) {
+                return fortuneArray[fortune];
+            }
+            else if (fortune == 5) {
+                for (var i = 0; i <= fortuneArray.length; i++){
+                document.write(fortuneArray[i] + "<br>");  
+                }
+            }
+            
+            else {
+                document.write("The spirits must be messing with me!");
+            }
+        }
+    
+</script>
+</head>
+<body>
+<h1>~Your fortune awaits~</h1>
+<script type="text/javascript">
+    fortune = prompt("Please enter a number 0 to 4 for a fortune!", 0);
+    document.write(fortuneFunction());
+</script>
+</body>
+
+</html>

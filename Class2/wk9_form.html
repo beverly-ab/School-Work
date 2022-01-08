@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>STUDENT FORM</title>
+    <script>
+        function calcTuition() {
+            yourTuition = 0;
+            
+            if (document.getElementById("fullTime").checked == true) {
+                yourTuition = 4000;
+            }
+            else {
+                yourTuition = document.getElementById("numCourses").value * 250;   
+            }
+
+
+            if (document.getElementById("medtypeA").checked == true) {
+                yourTuition = yourTuition + 100 - (document.getElementById("finAid").value + document.getElementById("scholarship").value);
+            }
+            else {
+                if (document.getElementById("medtypeB").checked == true) {
+                    yourTuition = yourTuition + 200  - (document.getElementById("finAid").value + document.getElementById("scholarship").value);
+                }
+                else if (document.getElementById("medtypeC").checked == true) {
+                    yourTuition = yourTuition + 250   - (document.getElementById("finAid").value + document.getElementById("scholarship").value);
+                }
+                else {
+                    yourTuition = yourTuition + 300  - (document.getElementById("finAid").value + document.getElementById("scholarship").value);
+                }
+            }
+            yourTuition = Math.round(yourTuition)
+            return yourTuition;
+        }
+    </script>
+</head>
+
+<body>
+    <h1>STUDENT FORM</h1>
+    <img src="pexels-josh-sorenson-1714208.jpg" alt="computer with dual screens">
+    <form name="stuform" id="stuform">
+        <p>Name: <input type="text" name="namez"><br>
+            <br>Major: <input type="text" name="major" id="major"><br>
+            <br>Year entered: <input type="text" name="yearEnt" id="yearEnt" ><br>
+            <br>Year of grad: <input type="text" name="yearGrad" id="yearGrad" ><br>
+            <br>Number of courses: <input type="number" name="numCourses" id="numCourses" ><br>
+            <br>Financial Aid: <input type="text" name="finAid" id="finAid"  ><br>
+            <br>Scholarship: <input type="text" name="scholarship" id="scholarship" ><br>
+        </p>
+        <p>FT or PT?<br>
+            <input type="radio" name="fullTime" id="fullTime">Full Time<br>
+            <input type="radio" name="partTime" id="partTime">Part Time<br>
+        </p>
+        <p>Select Medical Plan<br>
+            <input type="radio" name="medtype" id="medtypeA">Plan A<br>
+            <input type="radio" name="medtype" id="medtypeB">Plan B<br>
+            <input type="radio" name="medtype" id="medtypeC">Plan C <br>
+            <input type="radio" name="medtype" id="medtypeD" checked>Plan D</p>
+        <input type="button" value="Calculate Tuition" onclick="tuitionAmt.value=calcTuition()">
+
+        <b><i>Tuition Amount: </i></b> <input type="text" name="tuitionAmt" id="tuitionAmt" size="10"><br>
+        <br>
+        <input type="reset" value="reset">
+    </form>
+</body>
+
+</html>

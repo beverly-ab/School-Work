@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 7 AND 8</title>
+    <script type="text/javascript">
+   function calc(licks) {
+        tootsieSize1 = document.licks.tootsieSize.value;
+        numLicks1 = document.licks.numLicks.value;
+        
+        licksAmt = (tootsieSize1 * 2.54) / (numLicks1);
+        document.licks.licksAmt.value = licksAmt;
+        alert("To get to the center " + licksAmt);
+
+    }
+    function clearData(licksMine) {
+        document.licks.tootsieSize.value = "";
+        document.licks.numLicks.value = "";   
+        document.licks.licksAmt.value = " ";
+    }
+    </script>
+</head>
+<body>
+    <h2>Question 7/8</h2>
+<form action="#" name=licks>
+<p>
+How big is the tootsie pop?
+<input type="text" name="tootsieSize" /><br >
+How many licks can you do?
+<input type="text" name="numLicks" /><br >
+<br >
+<input type="button" value="CLICK" onclick="calc(licks)" />
+<input type="button" value="CLEAR" onclick="clearData(licks)" />
+<br /><br />
+Licks to the center:
+<input type="text" name="licksAmt" /><br />
+</p>
+</form>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+    <title>Question 9</title>
+    <style type="text/css">
+        body {
+            background: rgb(243, 220, 245);
+            color: brown;
+        }
+    </style>
+    <script type="text/javascript">
+
+            function calcAvg(invenInfo) {
+                onHand1 = document.invenInfo.onHand.value;
+                onOrder1 = document.invenInfo.onOrder.value;
+                reorder1 = document.invenInfo.reorder.value;
+                need = (reorder1 - onHand1);
+                if ((onHand1 + onOrder1 ) < reorder1){
+                    invenNeed = (need * .1) + need;
+                    document.invenInfo.invenNeed.value = invenNeed;
+                }
+                else {
+                    document.invenInfo.invenNeed.value = invenNeed;
+                }
+            }
+        function clearData(invenInfoMine) {
+            document.invenInfo.onHand.value = "";
+            document.invenInfo.onOrder.value = "";
+            document.invenInfo.reorder.value = " ";
+            document.invenInfo.invenNeed.value = " ";
+        }
+
+    </script>
+</head>
+
+<body>
+    <h1>Question 9</h1>
+
+    <form action="#" name=invenInfo>
+        <p>
+            Enter item number:
+            <input type="text" name="itemNum" size="5"><br />
+            Enter on-hand number: 
+            <input type="text" name="onHand" size="5" /><br />
+            Enter on order number:
+            <input type="text" name="onOrder" size="5" /><br />
+            Enter reorder point:
+            <input type="text" name="reorder" size="5" /><br> <br>
+            <input type="button" value="ORDER" onclick="calcAvg(invenInfo)" />
+            <input type="button" value="CLEAR" onclick="clearData(invenInfo)" />
+            <br />
+            You need to reorder:
+            <input type="text" name="invenNeed" size="5" /><br />
+        </p>
+    </form>
+</body>
+
+</html>

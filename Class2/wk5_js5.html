@@ -1,0 +1,33 @@
+
+<html>
+<script type="text/javascript">
+var toorder = 0;
+var cost = 0;
+var discount1;
+var discount2;
+var ans;
+
+cost=prompt("Price of supplies", 0);
+toorder = prompt("How many?", 0);
+ 
+ans = cost * toorder;
+if (ans >1000)
+	{
+discount1 = (ans - (ans *.1) );
+document.write("You will pay:", discount1);
+}
+else if (ans > 500)
+	{	
+discount2 = (ans -(ans *.05) );
+document.write("You pay: ", discount2);
+	}
+else {
+document.write("You pay full price. No discount. <br>", ans );
+}
+
+	
+
+
+
+</script>
+</html>

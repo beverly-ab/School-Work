@@ -1,0 +1,12 @@
+function calcBoard() {
+
+if (document.getElementById("petTypeS").checked == true) {
+yourPay = (document.getElementById("sal").value / 52);
+}
+else {
+if (document.getElementById("perDay").value <= 40) { yourPay=document.getElementById("perDay").value *
+    document.getElementById("numDays").value; } else { ovtHrs=document.getElementById("perDay").value - 40;
+    ovtPay=document.getElementById("numDays").value * ovtHrs * 1.5; yourPay=document.getElementById("numDays").value *
+    40 + ovtPay; } } if (document.getElementById("cageTypeA").checked==true) { yourPay=yourPay - 50; } else { if
+    (document.getElementById("cageTypeB").checked==true) { yourPay=yourPay - 35; } else { yourPay=yourPay - 25; } }
+    yourPay=Math.round(yourPay * 100) / 100; return yourPay; }

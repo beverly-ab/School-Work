@@ -1,0 +1,43 @@
+
+<html>
+<script type="text/javascript">
+var total=0;
+var ct=0;
+var user_input;
+var another="Y";
+while (another == "Y"){
+ct = 0;
+total=0;
+while (ct < 4)
+   {
+	user_input =prompt("What is your grade?",0);
+    ct = ct + 1;
+	total= Number(total) + Number(user_input);
+   }
+   var avg = Number(total)/4;
+document.write("Your average of these 4 is ", avg, "<br>");
+	another = prompt("Do you want to enter another 4 grades? Y or N")
+   }
+
+if (avg < 65) {
+document.write("<br>Your average is F");
+}
+ else if (avg < 70) {
+ document.write("<br>Your average is D");
+ }
+ else if (avg < 80){
+ document.write("<br>Your average is C");
+ }
+ else if (avg < 90){
+ document.write("<br>Your average is B");
+ }
+else { 
+document.write("<br>Your average is A")
+}
+
+
+</script>
+</html>
+
+
+

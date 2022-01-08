@@ -1,0 +1,25 @@
+
+<html>
+<script type="text/javascript">
+var item1= 0;
+var item2 = 0;
+var item3 = 0;
+var anstot = 0;
+var anstax = 0;
+var finaltot = 0;
+
+item1=prompt("Price of item 1", 0);
+item2=prompt("Price of item 2", 0);
+item3=prompt("Price of item 3", 0);
+
+anstot = Number(item1) + Number(item2) + Number(item3);
+document.write("Your total is: ", anstot);
+
+document.write("<br>");
+anstax = anstot * .062;
+document.write("Your tax is: ", anstax);
+document.write("<br>");
+finaltot = anstax + anstot;
+document.write("Your total after tax is: ", finaltot);
+</script>
+</html>

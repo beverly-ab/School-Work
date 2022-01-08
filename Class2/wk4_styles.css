@@ -1,0 +1,46 @@
+body {
+  background-color: powderblue;
+  margin: auto;
+}
+h1 {
+  color: rgb(0, 255, 85);
+  font-family: 'Lucida Console', 'Courier New', monospace;
+  height: 40vh;
+}
+p {
+  color: goldenrod;
+  height: 40vh;
+  background-image: linear-gradient(red, orange, yellow, green, blue, indigo);
+  border: 10px dotted white;
+  padding-top: 10%;
+}
+
+body,
+h1,
+p {
+  text-align: center;
+}
+
+.wk4 {
+  border-style: solid;
+  font-family: Lobster;
+  font-size: 120%;
+  padding-left: 25%;
+}
+.wk4a {
+  border: double;
+  font-family: fantasy;
+  font-size: 10%;
+  padding-right: 25%;
+  background: radial-gradient(#e66465, #9198e5);
+}
+.wk4b {
+  padding: 25%;
+  background-image: url('NEXT_Logo.jpg');
+  font-family: cursive;
+  width: 20vw;
+}
+
+/* What I used:
+height, width, background-color, background-image: linear-gradient, background-image: url, margin, padding, padding-top, padding-left, padding-right, color, font-family, font-size, border, border-style, text-align
+*/

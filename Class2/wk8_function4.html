@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <script>
+        function proc(num1, num2, num3) {
+            var ans = 0;
+            if (num1 > 20) {
+                ans = parseFloat(num1) + parseFloat(num2) + parseFloat(num3);
+                return ans;
+            }
+            else if(num1 == 20) {
+                    ans = parseFloat(num2) * parseFloat(num3);
+                return ans;
+                }
+            else {
+                    ans = (parseFloat(num1) + parseFloat(num2)) / parseFloat(num3);
+                    return ans;
+                }
+            }
+        
+    </script>
+</head>
+
+<body>
+    <script>
+        var num1in = 0;
+        var num2in = 0;
+        var num3in = 0;
+        num1in = prompt("Enter first number", 0);
+        num2in = prompt("Enter second number", 0);
+        num3in = prompt("Enter third number", 0);
+        outputans = proc(num1in, num2in, num3in);
+        document.write("The answer is " + outputans);
+    </script>
+</body>
+
+</html>

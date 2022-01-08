@@ -1,0 +1,40 @@
+<html>
+<head>
+<title>Kitty Bits</title>
+</head>
+<body>
+<h1>~*~KITTY BITS~*~</h1>
+<table>
+<tr>
+<td><https://miro.medium.com/max/720/1*DsoFE9Uue_GCBzOOYMHVfg.jpeg><br>
+<a href="http://www.boston-tea-party.org/" target="_blank">Boston Tea Party Historical Society</a><br>
+</td>
+<td>
+<?php
+$scene1 = <<<INFO
+
+INFO;
+$quesStyle = <<<SETUP
+"color: PINK; font-size: 16pt;"
+SETUP;
+print $scene1;
+could just call them a “group” of cats, or, even simpler, you could just refer to them as “cats,” but what’s the fun in that? 
+Wouldn’t you love to know how to refer to a group of cats in another, more obscure way? Of course!
+print "<p style=$quesStyle>What is a term for a group of cats?</p>";
+?>
+<form action = "scene1response.php" method = "post">
+<input type = "radio" name="ans" value="true">A fun time!<br>
+<input type = "radio" name="ans" value="false">Coven<br>
+<input type = "radio" name="ans" value="false">Clowder<br>
+<input type = "submit" value = "SEND ANSWER">
+</form>
+</td>
+</tr>
+</table>
+<br><br>
+References:<br>
+One source for information to the Boston Tea Party is: The Boston Tea Party Historical Society. www.boston-tea-party.org. 
+Images at the site came from the Boston Tea Party Historical Society. 
+Other information was gathered from: "The Boston Tea Party, 1773," EyeWitness to History, www.eyewitnesstohistory.com (2002).<br>
+</body>
+</html>

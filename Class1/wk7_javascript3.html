@@ -3,15 +3,13 @@
 var total=0;
 var ct=0;
 var user_input;
-
-while (total <= 200)
+while (ct < 5)
    {
-	user_input =prompt("How many points?",0);
+	user_input =prompt("What is your grade?",0);
     ct = ct + 1;
 	total= Number(total) + Number(user_input);
-	
    }
-
-document.write("You made it! You can go on!");
+var avg = Number(total)/5;
+document.write("Your average is ", avg);
 </script>
 </html>

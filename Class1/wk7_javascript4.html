@@ -3,13 +3,15 @@
 var total=0;
 var ct=0;
 var user_input;
-while (ct < 5)
+var cont="Y";
+while (cont=="Y")
    {
+	ct = ct + 1;
 	user_input =prompt("What is your grade?",0);
-    ct = ct + 1;
 	total= Number(total) + Number(user_input);
+	cont = prompt("Continue? Y or N", "");
    }
-var avg = Number(total)/5;
+var avg = Number(total)/ct;
 document.write("Your average is ", avg);
 </script>
 </html>
